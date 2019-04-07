@@ -3,13 +3,13 @@
   mysql_db:
     state: dump
     name: all
-    target: /home/ltdan/{{ ansible_hostname }}.{{ lookup('pipe','date +%Y-%m-%d-%H-%M-%S') }}.sql
+    target: /home/<your_user>/{{ ansible_hostname }}.{{ lookup('pipe','date +%Y-%m-%d-%H-%M-%S') }}.sql
 
 # Pull backup to local machine
 - name: Pull file using rsync
   synchronize:
     mode: pull
-    src: /home/ltdan/*.sql
-    dest: /home/biff/received/
+    src: /home/<your_user>/*.sql
+    dest: /home/<your_user>/<your_folder/
     checksum: yes
     times: yes
