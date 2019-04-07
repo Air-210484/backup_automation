@@ -1,4 +1,4 @@
-## Simple BoilerPlate for new servers configuration
+## Simple Backup role for Ansible
 
 ### Goals :
 
